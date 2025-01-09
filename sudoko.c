@@ -96,7 +96,7 @@ void transposition(int **field) {
 }
 
 void random_swap_row_and_colom(int **field) {
-  int exclude[6] = {1, 2, 4, 5, 7, 8};
+  int exclude[7] = {1, 2, 4, 5, 7, 8};
   int first_i = generate_random_num(0, 6, exclude);
   int plus_num = generate_random_num(1, 2, NULL);
   int second_i = first_i + plus_num;
@@ -114,7 +114,7 @@ void random_swap_row_and_colom(int **field) {
 }
 
 void shake_field(int** field){
-  int number_of_rep = generate_random_num(1, 100000,NULL);
+  int number_of_rep = generate_random_num(100, 100000,NULL);
   for ( int i = 0; i < number_of_rep; i++){
     transposition(field);
     random_swap_row_and_colom(field);
